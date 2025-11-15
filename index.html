@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Music Redstone System – Installation Guide</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    margin: 40px;
+    line-height: 1.6;
+}
+h1, h2, h3 {
+    color: #333;
+}
+img {
+    max-width: 400px;
+    display: block;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+img:hover {
+    opacity: 0.8;
+}
+code {
+    background: #eee;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 12px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+.note {
+    background: #fff8da;
+    border-left: 4px solid #ffcc00;
+    padding: 10px;
+    margin: 15px 0;
+}
+ul li {
+    margin-bottom: 8px;
+}
+#overlay {
+    position: fixed;
+    display: none;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+#overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+.top-buttons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 1100;
+}
+button.lang-btn {
+    padding: 10px 15px;
+    background:#007bff;
+    color:#fff;
+    border-radius:5px;
+    border:none;
+    cursor:pointer;
+}
+a.download-btn {
+    padding: 10px 15px;
+    background:#28a745;
+    color:#fff;
+    border-radius:5px;
+    text-decoration:none;
+}
+.hidden { display:none; }
+</style>
+</head>
+<body>
+
+<div class="top-buttons">
+    <button class="lang-btn" onclick="toggleLanguage()">Türkçe / English</button>
+    <a class="download-btn" href="https://file.example.com" target="_blank">İndir</a>
+</div>
+
+<h1 class="en">Auto Music Redstone System – Requirements & Installation</h1>
+<h1 class="tr hidden">Otomatik Müzik Redstone Sistemi – Gereksinimler & Kurulum</h1>
+
+<img src="https://imgur.com/1iXS8OV.png" alt="Auto Music Redstone System Image">
+
+<h2 class="en">Required Blocks and Notes</h2>
+<h2 class="tr hidden">Gerekli Bloklar ve Notlar</h2>
+<ul class="en">
+    <li>Glass can be replaced with any block.</li>
+    <li>Stone can be replaced with any block.</li>
+    <li>Trapdoor can be replaced with any trapdoor or block, or may be omitted.</li>
+</ul>
+<ul class="tr hidden">
+    <li>Cam herhangi bir blok ile değiştirilebilir.</li>
+    <li>Taş herhangi bir blok ile değiştirilebilir.</li>
+    <li>Tuzak kapısı herhangi bir tuzak kapısı veya blok ile değiştirilebilir veya bırakılabilir.</li>
+</ul>
+
+<h2 class="en">Schematic Installation</h2>
+<h2 class="tr hidden">Şematik Kurulumu</h2>
+<p class="en">After downloading and extracting the ZIP, place your schematic file in the correct folder:</p>
+<p class="tr hidden">ZIP dosyasını indirip çıkardıktan sonra, şematik dosyanızı doğru klasöre yerleştirin:</p>
+
+<h3 class="en">Default Directories</h3>
+<h3 class="tr hidden">Varsayılan Klasörler</h3>
+<ul class="en">
+    <li><strong>WorldEdit:</strong> <code>gamefolder/config/worldedit/schematics/</code></li>
+    <li><strong>Litematica:</strong> <code>gamefolder/schematics/</code></li>
+</ul>
+<ul class="tr hidden">
+    <li><strong>WorldEdit:</strong> <code>gamefolder/config/worldedit/schematics/</code></li>
+    <li><strong>Litematica:</strong> <code>gamefolder/schematics/</code></li>
+</ul>
+
+<h2 class="en">Game Folder Locations</h2>
+<h2 class="tr hidden">Oyun Klasörü Konumları</h2>
+<div class="note en"><strong>Linux:</strong><br><code>~/.minecraft</code></div>
+<div class="note tr hidden"><strong>Linux:</strong><br><code>~/.minecraft</code></div>
+<div class="note en"><strong>Windows:</strong><br><code>C:\Users\&lt;YourUserName&gt;\AppData\Roaming\.minecraft</code><br>(Or use <code>%appdata%</code>)</div>
+<div class="note tr hidden"><strong>Windows:</strong><br><code>C:\Users\&lt;KullanıcıAdınız&gt;\AppData\Roaming\.minecraft</code><br>(Veya <code>%appdata%</code> kullanın)</div>
+<div class="note en"><strong>macOS:</strong><br><code>/Users/&lt;YourUserName&gt;/Library/Application Support/minecraft</code></div>
+<div class="note tr hidden"><strong>macOS:</strong><br><code>/Users/&lt;KullanıcıAdınız&gt;/Library/Application Support/minecraft</code></div>
+
+<h2 class="en">WorldEdit Instructions</h2>
+<h2 class="tr hidden">WorldEdit Talimatları</h2>
+<p class="en">After placing your schematic in the WorldEdit folder, load and paste it using:</p>
+<p class="tr hidden">Şematiği WorldEdit klasörüne yerleştirdikten sonra aşağıdaki kod ile yükleyip yapıştırın:</p>
+<pre>
+//schematic load automusicredstonesystem.schem
+//paste
+</pre>
+
+<h2 class="en">Litematica Instructions</h2>
+<h2 class="tr hidden">Litematica Talimatları</h2>
+<p class="en">First, since it starts from the schematic ground, break the block you are on, that is, go down one block.</p>
+<p class="tr hidden">İlk olarak, şematik zeminden başladığı için, bulunduğunuz bloğu kırın, yani bir blok aşağı inin.</p>
+<ol class="en">
+    <li>Press the default <strong>M key</strong> to open the Litematica menu.</li>
+    <li>Select <strong>Load Schematics</strong> from the menu:<br>
+        <img src="https://imgur.com/IIy2hyP.png" alt="Load Schematics Menu">
+    </li>
+    <li>Select your schematic file:<br>
+        <img src="https://imgur.com/2vnusQ0.png" alt="Select schematic file">
+    </li>
+    <li>Click <strong>Load Schematic</strong> to place it:<br>
+        <img src="https://imgur.com/5TFN62y.png" alt="Load Schematic">
+    </li>
+</ol>
+<ol class="tr hidden">
+    <li>Varsayılan <strong>M tuşuna</strong> basarak Litematica menüsünü açın.</li>
+    <li>Menüden <strong>Load Schematics</strong> seçin:<br>
+        <img src="https://imgur.com/IIy2hyP.png" alt="Şematik Yükleme Menüsü">
+    </li>
+    <li>Şematik dosyanızı seçin:<br>
+        <img src="https://imgur.com/2vnusQ0.png" alt="Şematik Dosyası Seçme">
+    </li>
+    <li><strong>Load Schematic</strong> tıklayarak yerleştirin:<br>
+        <img src="https://imgur.com/5TFN62y.png" alt="Şematik Yükleme">
+    </li>
+</ol>
+
+<div id="overlay" onclick="this.style.display='none'">
+    <img id="overlay-img">
+</div>
+
+<script>
+function toggleLanguage() {
+    document.querySelectorAll('.en').forEach(el => el.classList.toggle('hidden'));
+    document.querySelectorAll('.tr').forEach(el => el.classList.toggle('hidden'));
+}
+
+// Lightbox effect for images
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('click', function() {
+        const overlay = document.getElementById('overlay');
+        const overlayImg = document.getElementById('overlay-img');
+        overlayImg.src = this.src;
+        overlay.style.display = 'flex';
+    });
+});
+</script>
+
+</body>
+</html>
