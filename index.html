@@ -217,20 +217,18 @@
     </div>
 </div>
 
-<!-- Lightbox Overlay -->
 <div class="lightbox-overlay" onclick="closeLightbox()">
     <img src="" alt="Enlarged Image">
 </div>
 
 <script>
-    // Language switch
+
     function setLang(lang) {
         document.querySelectorAll('.lang').forEach(el => {
             el.style.display = el.classList.contains(lang) ? 'block' : 'none';
         });
     }
 
-    // Lightbox
     document.querySelectorAll('img').forEach(img => {
         img.addEventListener('click', function(){
             const overlay = document.querySelector('.lightbox-overlay');
